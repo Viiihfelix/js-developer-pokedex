@@ -42,7 +42,7 @@ function fecharModalDetails() {
   modal.classList.add("hidden");
   fade.classList.add("hidden");
 
-  modalHeader.classList.remove(pokemonInformacoes.tipo);
+  modalHeader.classList.remove(pokeInformacoes.tipo);
 
   modalImage.setAttribute("src", "");
   modalImage.setAttribute("alt", "");
@@ -57,18 +57,18 @@ function fecharModalDetails() {
 }
 
 function montarModal() {
-  modalHeader.classList.add(pokemonInformacoes.tipo);
+  modalHeader.classList.add(pokeInformacoes.tipo);
 
-  modalImage.setAttribute("src", pokemonInformacoes.imagem);
-  modalImage.setAttribute("alt", pokemonInformacoes.nome);
+  modalImage.setAttribute("src", pokeInformacoes.imagem);
+  modalImage.setAttribute("alt", pokeInformacoes.nome);
 
-  modalName.innerText = pokemonInformacoes.nome;
+  modalName.innerText = pokeInformacoes.nome;
 
-  if (pokemonInformacoes.altura < 1)
-    modalAltura.innerText = `${pokemonInformacoes.altura} cm`;
-  else modalAltura.innerText = `${pokemonInformacoes.altura} m`;
+  if (pokeInformacoes.altura < 1)
+    modalAltura.innerText = `${pokeInformacoes.altura} cm`;
+  else modalAltura.innerText = `${pokeInformacoes.altura} m`;
 
-  modalWeight.innerText = `${pokemonInformacoes.peso} kg`;
+  modalWeight.innerText = `${pokeInformacoes.peso} kg`;
 
-  modalHabilidades.innerText = pokemonInformacoes.habilidades.join(", ");
+  modalHabilidades.innerText = pokeInformacoes.habilidades.join(", ");
 }
